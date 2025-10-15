@@ -1,0 +1,105 @@
+/* Start Global Rules */
+:root {
+  --textColor: #000;
+  --bg: white;
+  --bgSoft: #f6f3f3;
+  --textColorSoft: #555;
+  --border: lightgray;
+  --icon-color: black;
+  --border-color-input: #ccc;
+  --secondary-color: #f3310b;
+}
+
+.theme-dark {
+  --textColor: whitesmoke;
+  --bg: #222;
+  --bgSoft: #333;
+  --textColorSoft: lightgray;
+  --border: #444;
+  --icon-color: white;
+  --border-color-input: #444;
+  --secondary-color: #f3310b;
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.15;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+// ::-webkit-scrollbar {
+//   /* لتغيير عرض السكرول الخاص بالصفحة */
+//   width: 15px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   /* لتغيير خلفية السكرول الخاص بالصفحة */
+//   background-color: white;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   /* لتغيير لون السكرول الخاص بالصفحة */
+//   background-image: linear-gradient(to top, #938eef 40%, #c6c2fc);
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//   /* لتغيير لون السكرول الخاص بالصفحة عند وضع السهم عليه*/
+//   background-image: linear-gradient(to top, #ada9ff 40%, #d5d2f9);
+// }
+
+/* End Global Rules */
+
+// animation
+
+@keyframes move-left-to-right {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    transform: translateX(100%);
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+@keyframes move-right-to-left {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    border-radius: 10px 0 0 10px;
+  }
+}

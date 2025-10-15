@@ -1,0 +1,109 @@
+.profile {
+  position: relative;
+  width: 55vw;
+  padding: 40px;
+  background-color: var(--bgSoft);
+  min-height: 100vh;
+
+  .pic-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+
+    .cover-pic {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 30vh;
+      border-radius: 6px;
+    }
+
+    .profile-pic-name {
+      position: absolute;
+      right: 50%;
+      width: 40%;
+      height: 20vh;
+      bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(50%);
+      z-index: 888;
+
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 10px solid var(--bgSoft);
+      }
+
+      span.name {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--textColorSoft);
+      }
+    }
+  }
+
+  .page-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 50%;
+
+    .numbers {
+      display: flex;
+      gap: 20px;
+
+      .section{
+
+        .number {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          font-size: 22px;
+          font-weight: bold;
+          color: var(--textColorSoft);
+        }
+        
+        .title {
+          font-size: 12px;
+          color: gray;
+          font-weight: bold;
+          letter-spacing: 1px;
+          transition-duration: 0.4s;
+        }
+      }
+      .section:hover .title{
+        color: var(--secondary-color);
+      }
+    }
+    .update-profile-icon {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .update {
+        padding: 5px 70px;
+        border-radius: 8px;
+        border: 2px solid var(--border);
+        color: var(--textColorSoft);
+        font-weight: bold;
+        font-size: 13px;
+        transition-duration: 0.4s;
+      }
+      .update:hover{
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
+      }
+    }
+  }
+  .posts{
+    margin-top: 80px;
+  }
+}

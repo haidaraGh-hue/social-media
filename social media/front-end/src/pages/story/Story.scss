@@ -1,0 +1,14 @@
+.view-story{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgSoft);
+    display: flex;
+    justify-content: center;
+
+    .story-in-view{
+        position: absolute;
+        height: 100%;
+        width: 40%;
+    }
+}

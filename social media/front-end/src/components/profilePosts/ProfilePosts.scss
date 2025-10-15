@@ -1,0 +1,230 @@
+.add-post {
+  width: 45vw;
+  display: block;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--bg);
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+
+  form {
+    .add-text {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0 0 20px;
+      border-bottom: 1px solid var(--border-color-input);
+      
+      img.profile-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      input.text {
+          flex: 1;
+          border: none;
+          background-color: var(--bg);
+          padding: 10px;
+      }
+    }
+
+    .submit {
+      padding: 20px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .options {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+        .add-img {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          img.option {
+              width: 20px;
+              height: 20px;
+          }
+          label {
+              color: var(--textColor);
+              font-size: 14px;
+          }
+          input.input-img {
+              display: none;
+          }
+        }
+
+        .add-place {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          img.option {
+              width: 20px;
+              height: 20px;
+          }
+          span {
+              color: var(--textColor);
+              font-size: 14px;
+          }
+        }
+
+        .tag-friends {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          img.option {
+              width: 20px;
+              height: 20px;
+          }
+          span {
+              color: var(--textColor);
+              font-size: 14px;
+          }
+        }
+      }
+
+      button {
+          padding: 7px;
+          background-color: var(--secondary-color);
+          color: white;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: bold;
+      }
+    }
+  }
+}
+
+ul.profile-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  li.profile-post {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    min-height: 25vh;
+    max-height: 80vh;
+    margin: auto;
+    background-color: var(--bg);
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+
+    .nav-post {
+      padding: 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 20%;
+      z-index: 888;
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+        span {
+          font-size: 12px;
+          color: var(--textColor);
+        }
+      }
+      .details {
+        i {
+          color: var(--textColor);
+          font-size: 12px;
+        }
+      }
+    }
+
+    .content-text {
+      margin: 10px 20px;
+      flex: 1;
+      overflow: auto;
+      overflow-wrap: anywhere;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      p {
+        color: var(--textColor);
+      }
+    }
+
+    .content-with-img {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+        min-height: 25vh;
+        max-height: 45vh;
+        object-fit: fill;
+      }
+      .content-text-with-img {
+        margin: 10px 20px;
+        overflow: auto;
+        overflow-wrap: anywhere;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        p {
+          color: var(--textColor);
+        }
+      }
+    }
+
+    .bottom-nav-post {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      border-top: 1px solid var(--border);
+      border-radius: 0 0 12px 12px;
+      background-color: var(--bg);
+
+      .reactions {
+        i.reaction {
+          margin-right: 10px;
+          font-size: 18px;
+          cursor: pointer;
+          color: var(--textColor);
+          transition-duration: 0.4s;
+        }
+        i.reaction:hover {
+          color: var(--secondary-color);
+        }
+      }
+
+      .save-post {
+        i.reaction {
+          margin-right: 10px;
+          font-size: 18px;
+          cursor: pointer;
+          color: var(--textColor);
+          transition-duration: 0.4s;
+        }
+        i.reaction:hover {
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}
