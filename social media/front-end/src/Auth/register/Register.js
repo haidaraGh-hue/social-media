@@ -44,6 +44,7 @@ export default function Register() {
                 setEmailError(true);
             }
             setAccept(true);
+            console.log(err);
         }
     }
 
